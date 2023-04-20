@@ -31,3 +31,34 @@ public class BoaTest {
 ```
 ![Alt text](2.png)
 </br>
+
+### 3. Modified setUp() method in the BoaTest class : 
+```
+public class BoaTest {
+    private Boa jen;
+    private Boa ken;
+    
+    @Before
+    public void setUp() throws Exception {
+        jen = new Boa("Jennifer", 2, "grapes");
+        ken = new Boa("Kenneth", 3, "granola bars");
+    }
+    
+    // write test methods here
+}
+```
+![Alt text](3.png)
+</br>
+
+### 4. Modified testIsHealthy() method in the BoaTest class : 
+```
+@Test
+public void testIsHealthy() {
+    // check that jen is not healthy
+    assertFalse(jen.isHealthy());
+    
+    // check that ken is healthy
+    assertTrue(ken.isHealthy());
+}
+```
+</br>
